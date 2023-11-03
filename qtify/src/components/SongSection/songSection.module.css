@@ -1,0 +1,43 @@
+.albumCon{
+    
+    margin: 25px;
+    
+   
+    
+}
+.topAlbumCon{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.filterWrapper{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+.filterCon{
+    width: 68px;
+    text-align: center;
+    height: 34px;
+    cursor: pointer;
+}
+.isSelected{
+    height: 3px;
+    margin-top: 5px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+
+}
+.isNotSelected{
+    height: 3px;
+    margin-top: 5px;
+}
+.CircularProgress{
+    width: 100%;
+    height: 209px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

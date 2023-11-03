@@ -1,0 +1,34 @@
+.albumCon{
+    
+    margin: 25px;
+    
+   
+    
+}
+.topAlbumCon{
+    
+    display: inline-flex;
+    flex-direction: row;
+    gap: 40px;
+
+    
+    flex-wrap: wrap;
+    
+}
+.albumHeadCon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.collapseBtn{
+    cursor: pointer;
+    color: var(--color-primary);
+}
+.CircularProgress{
+    width: 100%;
+    height: 209px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

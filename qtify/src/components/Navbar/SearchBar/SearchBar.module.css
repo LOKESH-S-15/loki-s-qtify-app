@@ -1,0 +1,20 @@
+.search{
+    display: flex;
+    align-items: stretch;
+    height: 48px;
+}
+.input{
+    padding: 4px 20px;
+    height: 100%;
+    width: 502px;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid #121212;
+}
+.btn{
+    height: 100%;
+    padding:  14px 20px;
+    border-radius: 0px 8px 8px 0px ;
+    border-left: none;
+    border: 1px solid #121212;
+    cursor: pointer;
+}

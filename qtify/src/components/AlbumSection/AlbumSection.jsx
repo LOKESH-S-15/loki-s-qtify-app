@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AlbumCard from "../AlbumCard/AlbumCard";
 import styles from "./AlbumSection.module.css";
 import { CircularProgress } from "@mui/material";
+import {Skeleton} from '@mui/material';
 import Carousel from "../AlbumSection/Carousel/Carousel";
 const TopAlbumSection = ({ data, title, type }) => {
   
@@ -18,7 +19,29 @@ const TopAlbumSection = ({ data, title, type }) => {
         </p>
       </div>
       {data &&data.length === 0? (
-        <div className={styles.CircularProgress}><CircularProgress /></div>
+        <div className={styles.CircularProgress}>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
+        <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>
+        </div>
+        
         
       ) : (
         <div>

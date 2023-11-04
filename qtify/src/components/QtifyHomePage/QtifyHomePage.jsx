@@ -14,6 +14,7 @@ const QtifyHomePage = () => {
     const [songs, setSongs] = useState([]);
     const [genre,setGenre]=useState([]);
     const[selectedFilter,setSelectedFilter]=useState("");
+    const [filteredSongs,setFilteredSongs]=useState([]);
    
     useEffect(()=>{
       const instalizer=async ()=>{
@@ -39,6 +40,7 @@ const QtifyHomePage = () => {
    const getSongs=async ()=>{
     const data=await performSearchSongs();
     setSongs(data);
+    setFilteredSongs(data);
    }
    const getGenre=async ()=>{
     const data=await performSearchGenre();
@@ -48,13 +50,19 @@ const QtifyHomePage = () => {
    const handleFilter= async(event)=>{
     
     const filter=event.target.id;
-    console.log(filter)
+   
     setSelectedFilter(filter);
-    setSongs("");
-    const data=await performSearchSongs(filter);
-    setSongs(data);
-   }
     
+    if (filter===""){
+      setFilteredSongs(songs);
+      return;
+    }
+    else{
+      let filteredData=songs.filter((each)=>(each.genre.key===filter));
+      setFilteredSongs(filteredData);
+    }
+   }
+    console.log(songs)
 
   return (
     <div>
@@ -62,7 +70,7 @@ const QtifyHomePage = () => {
     <Hero/>
     <AlbumSection data={topAlbums} title={"Top Album"} type={"album"}/>
     <AlbumSection data={newAlbums} title={"New Album"} type={"album"}/>
-    <SongSection songData={songs} genreData={genre} title={"Songs"} type={"song"} handleFilter={handleFilter} selectedFilter={selectedFilter}/>
+    <SongSection songData={filteredSongs} genreData={genre} title={"Songs"} type={"song"} handleFilter={handleFilter} selectedFilter={selectedFilter}/>
     <ControlledAccordions/>
     </div>
   )

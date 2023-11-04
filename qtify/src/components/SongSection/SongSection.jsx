@@ -43,6 +43,7 @@ const SongSection = ({ songData,genreData, title, type ,handleFilter,selectedFil
       ) : (
         <div>
           <div>
+          {console.log(songData)}
             <Carousel
               data={songData}
               renderComponent={(item) => {

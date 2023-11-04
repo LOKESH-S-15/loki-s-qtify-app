@@ -1,12 +1,15 @@
 import React from "react";
 import styles from './AlbumCard.module.css';
-
+import Tooltip from '@mui/material/Tooltip';
+import Zoom from '@mui/material/Zoom';
 const AlbumCard = ({data,type}) => {
 
   const handletype=(type)=>{
     switch(type){
       case "album":{
-      return (<div className={styles.albumContainer}>
+      return (
+        <Tooltip title={`${data.follows} follows`} TransitionComponent={Zoom} placement="top" arrow>
+        <div className={styles.albumContainer}>
         <div className={styles.albumCard}>
           <img src={data.image} alt={data.title} className={styles.albumImg}/>
           <div className={styles.albumCardBottom}>
@@ -15,10 +18,13 @@ const AlbumCard = ({data,type}) => {
         </div>
         <h1 className={styles.albumName}>{data.title}</h1>
       </div>
+      </Tooltip>
 
       )}
       case "song":{
-        return (<div className={styles.albumContainer}>
+        return (
+          <Tooltip title={`${data.likes} likes`} TransitionComponent={Zoom} placement="top" arrow>
+          <div className={styles.albumContainer}>
           <div className={styles.albumCard}>
             <img src={data.image} alt={data.title} className={styles.albumImg}/>
             <div className={styles.albumCardBottom}>
@@ -27,6 +33,7 @@ const AlbumCard = ({data,type}) => {
           </div>
           <h1 className={styles.albumName}>{data.title}</h1>
         </div>
+        </Tooltip>
   
         )
       }

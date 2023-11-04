@@ -4,6 +4,7 @@ import styles from "./AlbumSection.module.css";
 import { CircularProgress } from "@mui/material";
 import Carousel from "../AlbumSection/Carousel/Carousel";
 const TopAlbumSection = ({ data, title, type }) => {
+  
   const [carouselToggle, setCarouselToggle] = useState(true);
   const handleToggle = () => {
     setCarouselToggle(!carouselToggle);
@@ -16,7 +17,7 @@ const TopAlbumSection = ({ data, title, type }) => {
           {!carouselToggle ? "Collapse" : "Show All"}
         </p>
       </div>
-      {data.length === 0 ? (
+      {data &&data.length === 0? (
         <div className={styles.CircularProgress}><CircularProgress /></div>
         
       ) : (

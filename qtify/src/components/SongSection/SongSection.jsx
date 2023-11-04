@@ -37,7 +37,7 @@ const SongSection = ({ songData,genreData, title, type ,handleFilter,selectedFil
         <h2>{title}</h2>
       </div>
       {<Genre genreData={genreData}/>}
-      {songData.length === 0 ? (
+      {songData && songData.length === 0 ? (
         <div className={styles.CircularProgress}><CircularProgress /></div>
         
       ) : (

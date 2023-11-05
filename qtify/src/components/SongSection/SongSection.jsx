@@ -5,7 +5,7 @@ import Carousel from "../AlbumSection/Carousel/Carousel";
 
 import { CircularProgress } from "@mui/material";
 
-const SongSection = ({ songData,genreData, title, type ,handleFilter,selectedFilter}) => {
+const SongSection = ({ songData,genreData, title, type ,handleFilter,selectedFilter,handleSongToPlay}) => {
     const Genre=({genreData})=>{
          return (<div className={styles.filterWrapper}>
             <div className={styles.filterCon} value={""} onClick={(e)=>{
@@ -43,11 +43,11 @@ const SongSection = ({ songData,genreData, title, type ,handleFilter,selectedFil
       ) : (
         <div>
           <div>
-          {console.log(songData)}
+          
             <Carousel
               data={songData}
               renderComponent={(item) => {
-                return <AlbumCard id={item.id} data={item} type={type}/>;
+                return <AlbumCard handleSongToPlay={handleSongToPlay} id={item.id} data={item} type={type}/>;
               }}
             />
           </div>

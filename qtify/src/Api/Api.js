@@ -8,6 +8,10 @@ export const performSearchTopAlbums=async ()=>{
       return data.data;
     }
     catch(error){
+      if (error.response.status===429){
+        return error.response.statusText
+
+      }
       console.error("Error", error.message)
     }
    };

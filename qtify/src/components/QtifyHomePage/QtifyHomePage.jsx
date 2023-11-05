@@ -8,26 +8,25 @@ import { performSearchGenre, performSearchNewAlbums,performSearchSongs,performSe
 import SongSection from '../SongSection/SongSection';
 import  ControlledAccordions  from '../FaqsSection/Faqs';
 
-const QtifyHomePage = () => {
+const QtifyHomePage = ({handleSongToPlay}) => {
     const [topAlbums,setTopAlbums]=useState([]);
     const [newAlbums,setNewAlbums]=useState([]);
     const [songs, setSongs] = useState([]);
     const [genre,setGenre]=useState([]);
     const[selectedFilter,setSelectedFilter]=useState("");
     const [filteredSongs,setFilteredSongs]=useState([]);
+
    
     useEffect(()=>{
       const instalizer=async ()=>{
-        
       await  getTopAlbums();
       await  getNewAlbums();
       await  getSongs();
       await  getGenre();
-      
       }
       instalizer();
     },[])
-   const getTopAlbums=async ()=>{
+    const  getTopAlbums=async ()=>{
     const data=await performSearchTopAlbums();
     setTopAlbums(data);
     
@@ -62,15 +61,14 @@ const QtifyHomePage = () => {
       setFilteredSongs(filteredData);
     }
    }
-    console.log(songs)
 
   return (
     <div>
     <Navbar/>
     <Hero/>
-    <AlbumSection data={topAlbums} title={"Top Album"} type={"album"}/>
-    <AlbumSection data={newAlbums} title={"New Album"} type={"album"}/>
-    <SongSection songData={filteredSongs} genreData={genre} title={"Songs"} type={"song"} handleFilter={handleFilter} selectedFilter={selectedFilter}/>
+    <AlbumSection data={topAlbums} title={"Top Album"} type={"album"} />
+    <AlbumSection data={newAlbums} title={"New Album"} type={"album"} />
+    <SongSection songData={filteredSongs} genreData={genre} title={"Songs"} type={"song"} handleFilter={handleFilter} selectedFilter={selectedFilter}  handleSongToPlay={handleSongToPlay}/>
     <ControlledAccordions/>
     </div>
   )

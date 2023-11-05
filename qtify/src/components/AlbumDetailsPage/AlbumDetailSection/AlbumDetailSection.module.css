@@ -1,0 +1,80 @@
+.albumDetailsSectionCon{
+
+}
+.albumDetailsSectionbackCon{
+
+    
+}
+.albumDetailsSectionHeadCon{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    width: 80%;
+    
+}
+.albumDetailsSectionHeadImage{
+   min-width: 238px;
+height: 279px;
+border-radius: 20px;
+border: 12px solid #121212;
+    
+}
+.albumDetailsSectionHeadDeatilsCon{
+    display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+
+    
+}
+.albumDetailsSectionHeadTitle{
+    color: #FFF;
+
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    
+}
+.albumDetailsSectionHeadDec{
+    color: #FFF;
+
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}.albumDetailsSectionHeadSongDeatilsCon{
+    color: #FFF;
+
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+align-items: center;
+}
+.albumDetailsSectionHeadBtnCon{
+    display: flex;
+    gap: 18px !important;
+}
+.albumDetailsCardPaginationCon{
+    padding: 30px;
+}
+.albumDetailsCardPaginationHeadCon{
+    display: flex;
+    justify-content: space-between;
+}
+.albumDetailsCardPaginationNavCon{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+    gap: 4px;
+
+}

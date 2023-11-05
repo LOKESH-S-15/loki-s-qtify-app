@@ -54,6 +54,7 @@ const TopAlbumSection = ({ data, title, type }) => {
                     id={each.id}
                     data={each}
                     type={type}
+                    
                   />
                 );
               })}
@@ -63,7 +64,7 @@ const TopAlbumSection = ({ data, title, type }) => {
               <Carousel
                 data={data}
                 renderComponent={(item) => {
-                  return <AlbumCard id={item.id} data={item} type={type} />;
+                  return <AlbumCard  id={item.id} data={item} type={type} />;
                 }}
               />
             </div>

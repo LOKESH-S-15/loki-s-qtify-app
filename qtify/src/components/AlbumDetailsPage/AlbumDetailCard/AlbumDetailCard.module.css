@@ -1,0 +1,35 @@
+.albumDetailCardCon{
+    height: 90px;
+    padding: 10px;
+    padding-left: 0px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.411);
+}
+.albumDetailCardTitleCon{
+    display:flex;
+    align-items: center;
+    gap: 8px;
+    width: 300px;
+
+}
+.albumDetailCardImg{
+    height: 70px;
+    min-width: 70px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    
+}
+.albumDetailCardArtistCon{
+    display:flex;
+    
+    
+}
+.albumDetailCardDur{
+    text-align: end;
+    width: 300px;
+    
+}

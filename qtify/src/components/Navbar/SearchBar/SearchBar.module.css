@@ -2,6 +2,8 @@
     display: flex;
     align-items: stretch;
     height: 48px;
+    width: 572px;
+
 }
 .input{
     padding: 4px 20px;
@@ -17,4 +19,7 @@
     border-left: none;
     border: 1px solid #121212;
     cursor: pointer;
+}
+.searchCon{
+    position: relative;
 }

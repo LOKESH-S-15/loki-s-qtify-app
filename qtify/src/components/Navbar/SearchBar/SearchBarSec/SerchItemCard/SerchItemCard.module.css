@@ -1,0 +1,52 @@
+.serchItemCardCon{
+    height: 71px;
+    display: flex;
+    justify-content: space-between;
+    
+  align-items: center;
+  cursor: pointer;
+}
+.serchItemCardMainCon{
+  display: flex;
+  gap: 10px;
+  
+}
+.serchItemCardMainCon img{
+    width: 66px;
+    height: 71px;
+    border-radius: 10px;
+border: 5px solid #1D1D1D;
+  }
+.serchItemCardDetailsCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 200px;
+    text-overflow: ellipsis;
+}
+.serchItemCardDetailsCon h2{
+    color: #FFF;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.serchItemCardDetailsCon p{
+    color: #D8D8D8;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.follows{
+    color: #FFF;
+text-align: right;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}

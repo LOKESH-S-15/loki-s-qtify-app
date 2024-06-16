@@ -21,22 +21,27 @@ export const performSearchTopAlbums=async ()=>{
       return data.data;
     }
     catch(error){
+      if (error.response.status===429){
+        return error.response.statusText
+
+      }
       console.error("Error", error.message)
     }
    };   
    
 
-   export   const performSearchSongs=async (filter)=>{
+   export   const performSearchSongs=async ()=>{
     let url=`${BACKEND_ENDPOINT}/songs`
-    if (filter){
-        url=`${BACKEND_ENDPOINT}/songs?genre=${filter}`
 
-    }
     try{
       const data=await axios.get(url);
       return data.data;
     }
     catch(error){
+      if (error.response.status===429){
+        return error.response.statusText
+
+      }
       console.error("Error", error.message)
     }
    };  
@@ -48,6 +53,10 @@ export const performSearchTopAlbums=async ()=>{
       return data.data.data;
     }
     catch(error){
+      if (error.response.status===429){
+        return error.response.statusText
+
+      }
       console.error("Error", error.message);
     }
    };  

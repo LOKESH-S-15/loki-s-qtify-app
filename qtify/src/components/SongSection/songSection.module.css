@@ -34,10 +34,24 @@
     height: 3px;
     margin-top: 5px;
 }
+
 .CircularProgress{
     width: 100%;
    gap: 40px;
     height: 232px;
     display: flex;
     margin: 25px;
+    
+    
+    
+}
+.CircularProgressFil{
+    width: 100%;
+   gap: 40px;
+  
+    display: flex;
+    margin: 25px;
+    
+    
+    
 }

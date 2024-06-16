@@ -7,9 +7,9 @@ import { IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AlbumDetailsCardPagination from "./AlbumDetailsCardPagination";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
+import Skleten from "./Skleten";
 const AlbumDetailSection = ({ albumData ,handleSongToPlay}) => {
   const Navigate = useNavigate();
-  console.log(albumData);
   return (
     <div className={styles.albumDetailsSectionCon}>
       <div className={styles.albumDetailsSectionbackCon}>
@@ -24,7 +24,7 @@ const AlbumDetailSection = ({ albumData ,handleSongToPlay}) => {
         </IconButton>
       </div>
       {Object.keys(albumData).length === 0 ? (
-        "null"
+        <Skleten/>
       ) : (
         <div>
           <div className={styles.albumDetailsSectionHeadCon}>

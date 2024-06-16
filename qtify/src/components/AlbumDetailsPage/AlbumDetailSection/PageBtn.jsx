@@ -10,6 +10,7 @@ const PageBtn = ({ page, selected,handlePage }) => {
             width: 22,
             backgroundColor: "green",
             fontSize: "14px",
+            color:"white"
           }}
           onClick={()=>{handlePage(page,"num")}}
         >
@@ -22,6 +23,7 @@ const PageBtn = ({ page, selected,handlePage }) => {
             width: 22,
             backgroundColor: "white",
             fontSize: "14px",
+            color:"black"
           }}
           onClick={()=>{handlePage(page,"num")}}
         >

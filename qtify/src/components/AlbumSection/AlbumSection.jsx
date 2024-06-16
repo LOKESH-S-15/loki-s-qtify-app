@@ -5,7 +5,7 @@ import { CircularProgress } from "@mui/material";
 import {Skeleton} from '@mui/material';
 import Carousel from "../AlbumSection/Carousel/Carousel";
 const TopAlbumSection = ({ data, title, type }) => {
-  
+ 
   const [carouselToggle, setCarouselToggle] = useState(true);
   const handleToggle = () => {
     setCarouselToggle(!carouselToggle);
@@ -18,7 +18,7 @@ const TopAlbumSection = ({ data, title, type }) => {
           {!carouselToggle ? "Collapse" : "Show All"}
         </p>
       </div>
-      {data &&data.length === 0? (
+      {data==="Too Many Requests"|| data.length === 0? (
         <div className={styles.CircularProgress}>
         <div> <Skeleton variant="rounded"  style={{backgroundColor:"#4140404d"}} width={159} height={205}/>
         <Skeleton variant="text" sx={{ fontSize: '2rem' }} width={159} style={{backgroundColor:"#4140404d"}}/></div>

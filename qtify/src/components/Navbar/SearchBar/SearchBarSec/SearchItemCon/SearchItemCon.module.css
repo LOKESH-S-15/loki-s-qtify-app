@@ -1,0 +1,21 @@
+.searchItemCon {
+  width: 566px;
+  top: 61px;
+  position: absolute;
+  max-height: 412px;
+  min-height: 70px;
+  z-index: 2;
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--color-primary);
+  border-top: 0;
+  background: #1a1a1a;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 15px;
+  overflow-y:scroll;
+}
+.empty{
+  text-align: center;
+}

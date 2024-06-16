@@ -78,3 +78,20 @@ align-items: center;
     gap: 4px;
 
 }
+.shuffleBtn{
+
+    border-radius: 12px !important;
+    background: var(--Primary-400, #34C94B) !important;
+}
+.addToLibBtn{
+    border-radius: 12px !important;
+border: 1px solid var(--Primary-400, #34C94B) !important;
+background: #121212 !important;
+color: var(--color-primary) !important;
+   
+}
+.SkletenCon{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

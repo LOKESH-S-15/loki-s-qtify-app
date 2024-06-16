@@ -15,6 +15,8 @@ const QtifyHomePage = ({handleSongToPlay}) => {
     const [genre,setGenre]=useState([]);
     const[selectedFilter,setSelectedFilter]=useState("");
     const [filteredSongs,setFilteredSongs]=useState([]);
+    const [inputValue,setInputValue]=useState("");
+    const [searchData,setSearchData]=useState([]);
 
    
     useEffect(()=>{
@@ -61,10 +63,36 @@ const QtifyHomePage = ({handleSongToPlay}) => {
       setFilteredSongs(filteredData);
     }
    }
-
+   useEffect(()=>{
+    filterSearchData();
+   },[inputValue])
+   
+   const filterSearchData=()=>{
+    let data=[...topAlbums,...newAlbums,...songs];
+    
+    let filteredData=data.filter((each)=> {
+      
+      return (each.title.toLowerCase().includes(inputValue.toLowerCase()));
+    })
+    
+    setSearchData(filteredData);
+   }
+   
+   const handleInput=(event)=>{
+    let value=event.target.value;
+    // let data=[...topAlbums,...newAlbums,...songs];
+    // console.log("data",data);
+    // let filteredData=data.filter((each)=> {
+    //   return (each.title.includes(value));
+    // })
+    
+    setInputValue(value);
+   }
+  console.log(inputValue);
   return (
+    
     <div>
-    <Navbar/>
+    <Navbar searchData={searchData} handleInput={handleInput} inputValue={inputValue} handleSongToPlay={handleSongToPlay}/>
     <Hero/>
     <AlbumSection data={topAlbums} title={"Top Album"} type={"album"} />
     <AlbumSection data={newAlbums} title={"New Album"} type={"album"} />
